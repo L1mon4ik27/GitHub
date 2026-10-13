@@ -12,6 +12,15 @@ body{
 }
 
 h1{
+    display: block;
     text-align: center;
     color: var(--text-color);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 500;
+    
+}
+
+h1:hover{
+    opacity: 0.5;
 }
