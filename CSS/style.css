@@ -1,31 +1,69 @@
 :root {
-  --bg-color: #000c25;
+  --bg-color: #001749;
+  --block-bg-color: #001135;
+  --section-bg-color: #03030322;
   --text-color: #ffffff;
+  --button-bg-color: #8a8a8a;
+  --button-confirm-bg-color: #45b945;
   --text-size: 1rem;
 }
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--text-size);
+    
 }
 
 body{
     background-color: var(--bg-color);
-}
-
-h1{
-    display: block;
-    text-align: center;
-    font-size: calc(var(--text-size) * 2);
     color: var(--text-color);
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 1000ms;
-    
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-size);
 }
 
-h1:hover{
-    opacity: 0.5;
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    background-color: var(--block-bg-color);
+    padding: 0px 20px;
+}
+
+header>a{
+    display: inline-block;
+    padding: 10px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+}
+
+header>a:hover{
+    background-color: rgba(255, 255, 255, 0.049);
+}
+
+main{
+    grid-row: 2/3;
+    padding: 20px;
+}
+
+section{
+    display: block;
+    background-color: var(--section-bg-color);
+    border-radius: 20px;
+}
+
+footer{
+    grid-row: 3/4;
+    background-color: var(--block-bg-color);
+    padding: 20px;
 }
 
 #heading-controls{
@@ -38,7 +76,14 @@ h1:hover{
 #heading-controls>h1{
     display: inline-block;
     flex: 0 0 90%;
-
+    text-align: center;
+    font-size: calc(var(--text-size) * 2);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
+#heading-controls>h1:hover{
+    opacity: 0.5;
 }
 
 #heading-controls>input,
@@ -52,11 +97,11 @@ h1:hover{
 }
 
 #heading-button{
-    background-color: #8a8a8a;
+    background-color: var(--button-bg-color);
     transition-property: background-color;
     transition-duration: 500ms;
 }
 
 #heading-button:hover{
-    background-color: #45b945;
+    background-color: var(--button-confirm-bg-color);
 }
