@@ -8,10 +8,6 @@
   --text-size: 1rem;
 }
 
-*{
-    
-}
-
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -60,10 +56,16 @@ section{
     border-radius: 20px;
 }
 
+
 footer{
     grid-row: 3/4;
     background-color: var(--block-bg-color);
-    padding: 20px;
+    padding: 0px 20px;
+}
+
+p{
+    display: inline-block;
+    padding: 0px 10px;
 }
 
 #heading-controls{
